@@ -1,5 +1,8 @@
 # Patient_Monitoring_System
 
+Patient_Monitoring_System is Used for Monitoring the Patient Blood Oxyzen Levels, HeartBeat and Temperature, when Ever fluctuation are Occure Sensor Data is Sent to 
+Concern Doctor, Through the GSM module.
+
 
 Components:
 
