@@ -11,6 +11,9 @@ Components:
 6.DB9 connectors
 7.12v DC Power Adapter
 8.9v Battery
+9.LED's
+10.BUZZER
+11.16x2 LCD
 
 Skills Used:
 
