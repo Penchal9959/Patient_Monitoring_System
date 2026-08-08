@@ -1,53 +1,38 @@
 # Patient Monitoring System
 
-> **This repository is archived.** The reviewed and corrected version
-> of this project lives in [embedded-iot-projects / patient-monitoring](https://github.com/Penchal9959/embedded-iot-projects/tree/main/patient-monitoring), alongside the
-> others from the same series. Work happens there; nothing here changes.
+> **Archived.** The reviewed and corrected version of this project lives in
+> [embedded-iot-projects / patient-monitoring](https://github.com/Penchal9959/embedded-iot-projects/tree/main/patient-monitoring), alongside the others from the same series. Work happens there;
+> nothing here changes.
 
-### Why you want the maintained copy
+## What this was
 
-**The clinical thresholds in this version are wrong.** It alerts on a temperature at or above 98 F, which is normal; on a heart rate at or above 80 bpm, which is normal; and on SpO2 at or **above** 95%, which is the healthy direction - low blood oxygen is the dangerous one, so that comparison is inverted. A missing `pinMode` also left the buzzer pin undriven. All four are documented and corrected in the maintained copy. Do not use this version as a health monitor.
+A bedside monitor for three vitals - blood-oxygen saturation, pulse and body
+temperature - that texts the doctor when a reading leaves its normal range.
 
----
+## Hardware
 
-## Original description
+Arduino UNO, MAX30100 pulse oximeter, LM35 temperature sensor, SIM900A GSM
+module, 16x2 LCD, buzzer.
 
-Patient_Monitoring_System is Used for Monitoring the Patient Blood Oxyzen Levels, HeartBeat and Temperature, when Ever fluctuation are Occure Sensor Data is Sent to 
-Concern Doctor, Through the GSM module.
+## Known defects
 
+**The thresholds in this version are wrong, and wrong in the dangerous
+direction.** It alerts on a temperature at or above 98 °F, which is normal; on
+a heart rate at or above 80 bpm, which is normal; and on SpO2 at or **above**
+95%, which is the healthy direction - low blood oxygen is what harms you, so
+that comparison is inverted. A missing `pinMode` also leaves the buzzer pin
+undriven.
 
-Components:
+All four are corrected in the maintained copy. **Do not use this version as a
+health monitor.**
 
-1.Arduino UNO
-2.GSM SIM900A Module
-3.max30100 pulse Oximeter
-4.100k Thermistor
-5.PCB
-6.DB9 connectors
-7.12v DC Power Adapter
-8.9v Battery
-9.LED's
-10.BUZZER
-11.16x2 LCD
+## Why it was archived
 
-Skills Used:
+Twelve one-off repositories of two files each is not a portfolio, it is a
+list. They were consolidated into one maintained repository with the
+documentation and the build check they never had. This one is kept so
+existing links still resolve.
 
-1.Arduino IDE
-2.MAX30100 Pulse Oximeter Libraries
-3.SIM900A Libraries
+## Licence
 
-
----
-
-> **Superseded.** This project now lives in
-> [embedded-iot-projects](https://github.com/Penchal9959/embedded-iot-projects) alongside eleven
-> other builds.
-
-## SMS destination numbers
-
-The `AT+CMGS` commands use `+91XXXXXXXXXX` placeholders. Set your own destination numbers before
-flashing.
-
-> **Privacy note.** Earlier versions of this repository contained real mobile numbers hardcoded in
-> the sketch. They have been purged from the entire git history, but were publicly readable for
-> several years.
+[MIT](LICENSE)
